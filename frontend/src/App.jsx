@@ -46,7 +46,7 @@ const sendMessage = async () => {
   const aiMessage = { role: 'assistant', content: '' }
   setMessages([...updatedMessages, aiMessage])
 
-  const response = await fetch('http://localhost:5000/chat', {
+  const response = await fetch( 'https://ai-chat-application-production-9299.up.railway.app/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
